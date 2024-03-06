@@ -27,12 +27,9 @@ function App() {
     let newTodos = todos.filter(item=>{
       return item.id!==id
     }); 
-    // saveToLS()
+    saveToLS()
   }
   const handleDelete=(e,id)=>{
-    // let index = todos.findIndex(item=>{
-    //   return item.id===id;
-    // })
     let newTodos = todos.filter(item=>{
       return item.id!==id
     })
@@ -55,7 +52,7 @@ function App() {
     let newTodos = [...todos];
     newTodos[index].isCompleted = !(newTodos[index].isCompleted )
     setTodos(newTodos)
-    // saveToLS()
+    saveToLS()
   }
   const toggleFinished=(e)=>{
     setShowFinished(!showFinished)
